@@ -1,0 +1,52 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}    % Umlaute copy paste from PDF
+\usepackage[utf8]{inputenc} % Umlaute in Bibtex
+
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{color}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+
+\usepackage{geometry}
+\usepackage{mathpazo}
+
+\usepackage{datetime}\newcommand{\dating}[1]{#1$\mid$%
+\newdateformat{mydate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}%
+\mydate\today}
+\newcommand{\close}[2]{\vfill\noindent\hrulefill\\[1mm]\footnotesize%
+#1\hfill[\dating{#2}]\\[-14mm]}
+\usepackage{natbib}
+
+\geometry{%
+  a4paper,
+  top=36mm,
+  left=35mm,
+  right=16mm,
+  bottom=24mm,
+  headsep=26mm,
+  footskip=15mm
+}
+\setlength{\parindent}{0cm}
+
+
+\title{UZH Center for Reproducible Science \\
+Library}
+\author{Eva Furrer, Simon Schwab}
+\date{\today}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\bibliographystyle{ims}
+
+\nocite{*}
+
+\bibliography{crs.tidy}
+
+
+\end{document}
